@@ -35,7 +35,6 @@ while True:
 
     if player_choice == 4:
         break
-    
     print("computer choice : ", computer_choice)
 
     player_choice = options[player_choice]

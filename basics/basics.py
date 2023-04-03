@@ -66,7 +66,8 @@ if height > 120:
 else:
     print("You have to be taller")
 
- # ! DAY 4
+ # ! DAY 4 
+ #? Random & Lists
 import random  
 random_integer = random.randint(100, 200) # returns a random number between the numbers you give him as parameters (including them both)
 print(random_integer)
@@ -81,5 +82,21 @@ print(random_float)
 # fruits.insert(i,x)
 # fruits.remove(x)
 
+# ! DAY 5 
+# ? Loops
+fruits = ["apple", "pears","strawberries"]
+for fruit in fruits:
+    print(fruit)
 
+# range function // does no include the second parameter 
+total_sum = 0
+for number in range(2,101,2): # the last parameter is the steps que tange made
+    total_sum += number 
+print(total_sum)
+
+# Gauss problem 
+total = 0
+for number in range(1,101):
+    total += number
+print(total)
 
