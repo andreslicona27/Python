@@ -65,9 +65,21 @@ if height > 120:
     print(f"Your final bill is {bill}")
 else:
     print("You have to be taller")
- 
 
+ # ! DAY 4
+import random  
+random_integer = random.randint(100, 200) # returns a random number between the numbers you give him as parameters (including them both)
+print(random_integer)
 
+random_float = random.random() * 5
+print(random_float)
+
+# ? lists 
+# fruits = [item1, item2]
+# fruits.append()
+# fruits.extend([item1, item2])
+# fruits.insert(i,x)
+# fruits.remove(x)
 
 
 
