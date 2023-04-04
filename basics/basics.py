@@ -83,7 +83,7 @@ print(random_float)
 # fruits.remove(x)
 
 # ! DAY 5 
-# ? Loops
+# ? For Loops
 fruits = ["apple", "pears","strawberries"]
 for fruit in fruits:
     print(fruit)
@@ -100,3 +100,16 @@ for number in range(1,101):
     total += number
 print(total)
 
+# ! DAY 6
+# ? Functions
+def my_function():
+    print("Hello")
+    print("Bye")
+
+my_function();
+
+# The block of code are creating with the indentation 
+# ? While loop
+print_message = 0
+while print_message < 10:
+    print("hello")
