@@ -113,3 +113,37 @@ while print_message < 10:
 
 # ! DAY 7 Hangman project
 # ! DAY 8  Function parameters  / Caesar Cipher
+# ! DAY 9
+# ? Dictionaries
+# Define a dictionary of book information
+book = {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "published_year": 1960,
+    "publisher": "J. B. Lippincott & Co.",
+    "pages": 324
+}
+print(book["title"]) # show the value of a key
+book["category"] = "fantasy" # add new items to the dictionary
+book["category"] = "science" # this change the value, but if it does not exists it would create it 
+
+for key in book:
+    print(key)
+    print(book[key])
+
+# ? Nesting
+# is adding list or dictionaries inside dictionaries
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+
+# ! DAY 10
