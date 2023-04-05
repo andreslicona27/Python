@@ -113,3 +113,5 @@ my_function();
 print_message = 0
 while print_message < 10:
     print("hello")
+
+# ! DAY 7
