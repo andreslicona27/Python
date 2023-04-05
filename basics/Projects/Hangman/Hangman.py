@@ -14,7 +14,7 @@ for _ in chosen_word:
     
 while not end_of_game:
     guess = input("Guess the letter: ").lower()
-    os.system('cls')
+    os.system('cls') # *  clear the console, remember to import os 
     if guess in display:
       print(f"You have al ready guessed {guess}")
 

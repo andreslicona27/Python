@@ -7,20 +7,17 @@ name = input("What is your name?")
 length = len(name) #To know the amount of characters of a string 
 
 print("Hello " + input("Write your name? ") + "!")
-
 print(length)
 
 # ! DAY 2
-#?PRIMITIVE DATA TYPES
+# ? PRIMITIVE DATA TYPES
 print("hello"[0]) #Prints letter h 
 # 123_456_789 you can put "_" in numbers for it to be more easy for you to read them 
 
 num = len(input("Whats your name?"))
 print(type(num)) # Gives you the class of the variable 
-
 new_num = str(num) # Converts the variable in a string
 print(type(new_num))
-
 print("your name has " + new_num + " characters")
 
 a = float(100)
@@ -28,9 +25,9 @@ a = float(100)
 # Every time you divide you convert the type numbers to float 
 # Use "**" to get the Exponential number 
 
-print(round(10 / 3)) #for you to round numbers 
-print(round(10 / 3, 3)) #for you to round numbers with decimal places 
-print(round(10 // 3)) #gives you a integer 
+print(round(10 / 3)) # for you to round numbers 
+print(round(10 / 3, 3)) # for you to round numbers with decimal places 
+print(round(10 // 3)) # gives you a integer 
 
 # f-String
 score = 0
@@ -66,8 +63,8 @@ if height > 120:
 else:
     print("You have to be taller")
 
- # ! DAY 4 
- #? Random & Lists
+# ! DAY 4 
+# ? Random & Lists
 import random  
 random_integer = random.randint(100, 200) # returns a random number between the numbers you give him as parameters (including them both)
 print(random_integer)
@@ -78,7 +75,7 @@ print(random_float)
 # ? lists 
 # fruits = [item1, item2]
 # fruits.append()
-# fruits.extend([item1, item2])
+# fruits.extend([item1, item2]) # allows to add multiple elements to a list
 # fruits.insert(i,x)
 # fruits.remove(x)
 
@@ -88,7 +85,7 @@ fruits = ["apple", "pears","strawberries"]
 for fruit in fruits:
     print(fruit)
 
-# range function // does no include the second parameter 
+# range function // does not include the second parameter 
 total_sum = 0
 for number in range(2,101,2): # the last parameter is the steps que tange made
     total_sum += number 
@@ -114,4 +111,5 @@ print_message = 0
 while print_message < 10:
     print("hello")
 
-# ! DAY 7
+# ! DAY 7 Hangman project
+# ! DAY 8  Function parameters  / Caesar Cipher
