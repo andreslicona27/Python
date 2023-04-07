@@ -146,4 +146,11 @@ travel_log = [
 },
 ]
 
-# ! DAY 10
+# ! DAY 10 
+# ? Functions with outputs
+def format_name(fName, lName):
+    if fName == "" or lName == "":
+        return "Nothing to show"
+    f_Name = fName.title()
+    l_Name = lName.title()
+    return f"{f_Name} {l_Name}"
