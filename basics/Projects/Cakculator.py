@@ -38,6 +38,7 @@ operations = {
     "*": multiply,
     "/": divide
 }
+
 def calculator():
     num1 = float(input("Whats the first number? "))
 
