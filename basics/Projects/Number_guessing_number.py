@@ -10,12 +10,12 @@ logo = """
                                                                                                                                  
 """
 
-# PROPERTIES
+# * PROPERTIES
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
 turns = 0
 
-# FUNCTIONS
+# * FUNCTIONS
 def check_answer(guess, answer, turns):
     if guess > answer:
         print("To high")
@@ -51,5 +51,5 @@ def game():
         elif guess != answer:
             print("Guess again")
 
-# MAIN CODE
+# * MAIN CODE 
 game()

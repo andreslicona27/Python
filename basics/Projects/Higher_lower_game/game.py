@@ -5,14 +5,14 @@ from data import data
 
 print(art.logo)
 
-# PROPERTIES 
+# * PROPERTIES 
 account_a = {}
 account_b = {}
 score = 0
 guess = ""
 game_should_continue = True
 
-# FUNCTIONS
+# * FUNCTIONS
 def account_data(account):
     account_name = account["name"]
     account_description = account["description"]
@@ -25,7 +25,7 @@ def check_answer(guess, a_follower_count, b_follower_count):
     else:
         return guess == "b"
 
-# MAIN CODE
+# * MAIN CODE
 account_b = random.choice(data)
 while game_should_continue:
     account_a = account_b
