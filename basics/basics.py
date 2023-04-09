@@ -156,3 +156,29 @@ def format_name(fName, lName):
     return f"{f_Name} {l_Name}"
 
 # ! DAY 11 BlackJack
+# ! DAY 12 Local and global scope (accessibility of variables)
+# ? There is no block scope in python 
+# ? the only way you cant access to a local variable its if it is inside a function 
+
+enemies = 1
+def increase_enemies():
+    global enemies
+    enemies += 1
+
+# ? constants are always in capital letter
+
+# ! DAY 13 Debugging
+# ? Steps to identify bugs
+# 1 Describe the problem 
+# 2 Reproduce the bug 
+# 3 Play computer (pretend to be one)
+# 4 Fix the errors 
+# 5 Print is you friend 
+# 6 Use a Debugger
+    # EXTRA TIPS 
+    # 7 take a break
+    # 8 Ask a friend
+    # 9 Run the code often 
+    # 10 Ask Stack Overflow
+
+# ! DAY 14 Higher lower game project
