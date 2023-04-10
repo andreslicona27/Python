@@ -3,7 +3,7 @@
 # method is a function inside a class
 
 # import turtle
-# timmy = turtle.Turtle() another form of doing it
+# timmy = turtle.Draw_a_spirograph.py() another form of doing it
 from turtle import Turtle, Screen
 
 # OBJECT
@@ -49,3 +49,5 @@ user_1 = User("001", "angela")
 user_2 = User("002", "veronica")
 user_1.follow(user_2)
 
+# ! DAY 18
+# GUI graphical user interface
