@@ -33,7 +33,7 @@ print(table)
 # ! DAY 17
 # PascalCase / camelCase / snake_case
 class User:
-    # pass  # if you add a 'pass' declaration it would let you create empty classes and functions
+    # pass # if you add a 'pass' declaration, it would let you create empty classes and functions
     def __init__(self, user_id, username):  # Constructor
         self.id = user_id
         self.username = username
@@ -49,5 +49,8 @@ user_1 = User("001", "angela")
 user_2 = User("002", "veronica")
 user_1.follow(user_2)
 
-# ! DAY 18
+# ! DAY 18 Turtle_graphics
 # GUI graphical user interface
+# ! DAY 19 Turtle_graphics continues
+
+
