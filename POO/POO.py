@@ -52,5 +52,15 @@ user_1.follow(user_2)
 # ! DAY 18 Turtle_graphics
 # GUI graphical user interface
 # ! DAY 19 Turtle_graphics continues
+# ! DAY 20-21 Snake_Game
+    #class Fish(Animal):
+    #   def __init__(self):
+    #      super().__init__()
+    # this is how you inherits
+
+# slicing tuples
+piano_keys = ["a", "b", "c", "d", "e", "f"]
+print(piano_keys[2:5:2])  # from 'c' to 'f' print every letter counting by two
+print(piano_keys[::2])  # from beginning to end print every letter counting by two
 
 
