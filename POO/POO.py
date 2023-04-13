@@ -63,4 +63,6 @@ piano_keys = ["a", "b", "c", "d", "e", "f"]
 print(piano_keys[2:5:2])  # from 'c' to 'f' print every letter counting by two
 print(piano_keys[::2])  # from beginning to end print every letter counting by two
 
+# ! DAY 22 Pong Game
+
 
