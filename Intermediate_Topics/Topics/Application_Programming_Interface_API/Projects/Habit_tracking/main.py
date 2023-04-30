@@ -14,12 +14,14 @@ user_params = {
     "notMinor": "yes",
 }
 
-## POST
+# POST add new data 
+# this is just to settle up the user account
 # response = requests.post(url=pixela_endpoint, json=user_params)
 # print(response.text)
 
 graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
+# configuration of how you want your graph to be
 graph_config = {
     "id": GRAPH_ID,
     "name": "Cycling Graph",
@@ -32,6 +34,7 @@ headers = {
     "X-USER-TOKEN": TOKEN
 }
 
+# Authenticate yourself using header, and this creates the graph
 # response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
 # print(response.text)
 
@@ -41,7 +44,7 @@ today = datetime.now()
 # print(today.strftime("%Y%m%d"))
 
 pixel_data = {
-    "date": today.strftime("%Y%m%d"),
+    "date": today.strftime("%Y%m%d"),  # format the day type
     "quantity": input("How many kilometers did you cycle today? "),
 }
 
@@ -54,7 +57,7 @@ new_pixel_data = {
     "quantity": "4.5"
 }
 
-## PUT
+# PUT updates piece of data
 # response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
 # print(response.text)
 
@@ -62,6 +65,6 @@ new_pixel_data = {
 delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
 
-## DELETE
+# DELETE delete piece of data
 # response = requests.delete(url=delete_endpoint, headers=headers)
 # print(response.text)
