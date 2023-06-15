@@ -47,10 +47,11 @@ def delay_decorator(function):
         # Do something before the function
         function()
         # Add functionality after doing the function
+
     return wrapper_function()
 
 
-# this syntax's in know as syntactic sugar
+# This syntax's in know as syntactic sugar
 @delay_decorator
 def say_hello():
     print("Hello")
@@ -62,3 +63,39 @@ def say_bye():
 
 
 say_hello
+
+
+# Advanced python decorator
+class User:
+    def __init__(self, name):
+        self.name
+        self.is_logged_in = False
+
+
+def is_authenticated_decorator(function):
+    def wrapper(*args, **kwargs):
+        if args[0].is_logged_in:
+            function(args[0])
+
+    return wrapper
+
+
+@is_authenticated_decorator
+def create_blog_post(user):
+    print(f"This is {user.name}´s new blog post.")
+
+
+new_user = User("Andres")
+new_user.is_logged_in = True
+create_blog_post(new_user)
+
+
+# VARIABLES RULES
+@app.route("username/<name>")
+# @app.route("username/<path:name>")  # in this case in would return all the part that's after the name, including the name
+def greet(name):
+    return f"Hello {name}"  # You can add html code to create html elements
+
+
+if __name__ == "__main__":
+    app.run(debug=True)  # For you don't have to restart the file for every change
