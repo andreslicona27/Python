@@ -14,18 +14,15 @@ class Words:
     def get_words(self):
         # Get the words into two different arrays
         td_elements = self.words_driver.find_elements(By.TAG_NAME, "td")
-        del td_elements[:3]  # Delete header
-        cont = 0
-        for index, td in enumerate(td_elements):
-            if cont == 3:
-                cont = 0
+        td_elements = td_elements[3:]  # Exclude header rows
 
-            if cont == 1:
+        for index, td in enumerate(td_elements):
+            if index % 3 == 1:
                 self.unknown_words.append(td.text)
-            if cont == 2:
+            elif index % 3 == 2:
                 self.known_words.append(td.text)
 
-            cont += 1
+        self.words_driver.quit()
 
     def show_words(self):
         for word in self.unknown_words:
