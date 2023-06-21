@@ -4,8 +4,8 @@ from Anki import Anki
 
 # 1 GET THE WORDS FROM THE WEBSITE
 site = "https://strommeninc.com/1000-most-common-german-words-frequency-vocabulary/"
-words = Words(site)
-words.get_words()
+# words = Words(site)
+# words.get_words()
 
 
 # TODO 2 CREATE THE NEW DECK IN ANKI AND ADD THE WORDS
