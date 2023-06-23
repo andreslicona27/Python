@@ -9,8 +9,8 @@ site = "https://strommeninc.com/1000-most-common-german-words-frequency-vocabula
 
 
 # TODO 2 CREATE THE NEW DECK IN ANKI AND ADD THE WORDS
-anki_account = Anki()
-# anki_account.create_new_deck("Test-deck")
+anki_account = Anki("German-English-Deck")
+# anki_account.create_new_deck("German-English-Deck")
 # anki_account.add_words("Test-deck", words.unknown_words, words.unknown_words)
 
 
