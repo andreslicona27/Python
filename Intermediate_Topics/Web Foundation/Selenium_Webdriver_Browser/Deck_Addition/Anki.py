@@ -14,7 +14,7 @@ class Anki:
     anki_driver.get("https://ankipro.net")
 
 
-    def __init__(self, deck):
+    def __init__(self, deck, known_words, unknown_words):
         # Manage the waits for the getting elements
         wait = WebDriverWait(self.anki_driver, 5)
 
@@ -49,23 +49,43 @@ class Anki:
         # self.CURRENT_URL = self.anki_driver.current_url
         # self.create_new_deck(self.anki_driver.current_url, deck)
         ###############################################################################################################
+        #
+        # # create_deck_button = self.anki_driver.find_element(By.XPATH,"/html/body/div[1]/div/div/div/div/div/div[1]/div[3]/div/div/div")
+        # create_deck_button = wait.until(EC.presence_of_element_located((By.NAME, "Create new deck")))
+        # create_deck_button.click()
+        # time.sleep(4)
+        # try:
+        #     # Adds name
+        #     input_name = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/input")))
+        #     input_name.send_keys(f"Andres-Licona {deck}")
+        #
+        #     # Create deck
+        #     enter_button = self.anki_driver.find_element(By.XPATH,"/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/input")
+        #     enter_button.click()
+        # except StaleElementReferenceException:
+        #     print("we succed")
+        #     input_name = wait.until(EC.presence_of_element_located(
+        #         (By.XPATH, "/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/input")))
+        #     input_name.send_keys(f"Andres-Licona {deck}")
 
-        create_button_deck = self.anki_driver.find_element(By.XPATH,"/html/body/div[1]/div/div/div/div/div/div[1]/div[3]/div/div")
-        create_button_deck.click()
-        time.sleep(4)
-        try:
-            # Adds name
-            input_name = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/input")))
-            input_name.send_keys(f"Andres-Licona {deck}")
+        deck = self.anki_driver.find_element((By.XPATH, "/html/body/div[1]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div[2]"))
+        deck.click()
 
-            # Create deck
-            enter_button = self.anki_driver.find_element(By.XPATH,"/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/input")
-            enter_button.click()
-        except StaleElementReferenceException:
-            print("we succed")
-            input_name = wait.until(EC.presence_of_element_located(
-                (By.XPATH, "/html/body/div[5]/div/div[2]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/input")))
-            input_name.send_keys(f"Andres-Licona {deck}")
+        time.sleep(3)
+
+        add_cards_button = self.anki_driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div/div[1]/div[2]/div")
+        add_cards_button.click()
+
+        time.sleep(3)
+
+        front_side = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/div[1]/div/p")
+        back_side = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div[1]/div/p")
+        add_word_button = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[3]/div")
+        for known_word, unknown_word in zip(known_words, unknown_words):
+            front_side.send_keys(unknown_word)
+            back_side.send_keys(known_word)
+            add_word_button.click()
+            time.sleep(2)
 
 
     def create_new_deck(self, site, deck):
@@ -83,11 +103,24 @@ class Anki:
         enter_button.click()
 
 
-    def add_words(self, deck, unknown_words, known_words):
+    def add_words(self, known_words, unknown_words):
         # TODO verify if the word all ready exist in the deck
-        button = self.anki_driver.find_element(By.ID, "create_new_deck")
-        button.click()
+        deck = self.anki_driver.find_element((By.XPATH, "/html/body/div[1]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div[2]"))
+        deck.click()
 
-        addition_button = self.anki_driver.find_element(By.ID, "add_new_words")
-        addition_button.click()
+        time.sleep(3)
+
+        add_cards_button = self.anki_driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div/div[1]/div[2]/div")
+        add_cards_button.click()
+
+        time.sleep(3)
+
+        front_side = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/div[1]/div/p")
+        back_side = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div[1]/div/p")
+        add_word_button = self.anki_driver.find_element(By.XPATH, "/html/body/div[7]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[3]/div")
+        for known_word, unknown_word in zip(known_words, unknown_words):
+            front_side.send_keys(unknown_word)
+            back_side.send_keys(known_word)
+            add_word_button.click()
+            time.sleep(2)
         pass
