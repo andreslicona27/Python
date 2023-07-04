@@ -1,0 +1,24 @@
+UNDERSTANDING COLOR THEORY
+* Every color has their own emotions
+* Think what message you want to send to the users
+* Take opposite colors for them o pop out, but don't do it with text
+
+UNDERSTANDING TYPOGRAPHY AND HOW TO CHOOSE FONTS
+* Different fonts have different moods
+* Manage to use the correct font to make the webpage readable
+* Choose only two fonts to every site
+* Different weights can create contrast in the site
+
+MANAGE ATTENTION WITH EFFECTIVE USER INTERFACE UI DESIGN
+* Use hierarchy to guide people in your website either with color or fonts weight
+* Create a clear layout, chop the content in smaller pieces
+* Have the correct alignment and reduce them for it to be coherent
+* Respect white space
+* Know your audience and design for them
+
+USER EXPERIENCE UX DESIGN
+* Simplicity is always better
+* Keep design consistence / don't make them relearn how the website works
+* Read the user patters and better the site depending on that
+* Create great responsive website
+* Don't use your knowledge to give the client something they don't want
